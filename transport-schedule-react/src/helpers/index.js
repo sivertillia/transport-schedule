@@ -1,7 +1,7 @@
 import { globalClass } from '../styles'
 import moment from 'moment'
 
-export const getTimeHMS = () => moment().format('hh:mm:ss')
+export const getTimeHMS = () => moment().format('HH:mm:ss')
 
 export const isObb = x => !(x % 2)
 export const getClassName = (x) => {
@@ -16,6 +16,6 @@ export const getClassColorBox = (x) => {
 
 export const isTime = (tableTime) => {
   tableTime = tableTime.length < 5 ? '0' + tableTime : tableTime
-  const nowTimeHM = moment().format('hh:mm')
+  const nowTimeHM = moment().format('HH:mm')
   return tableTime > nowTimeHM
 }
