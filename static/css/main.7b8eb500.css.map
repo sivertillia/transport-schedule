@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.7b8eb500.css","mappings":"AAAA,KACI,mCACJ,CAGA,uCAGI,eACJ","sources":["index.css"],"sourcesContent":["body {\n    font-family: 'Merriweather', sans-serif;\n}\n\n/*Current Time Color TD:*/\n.mark_time_1,\n.mark_time_2,\n.mark_time_3 {\n    font-weight: 700;\n}"],"names":[],"sourceRoot":""}

@@ -2,6 +2,7 @@ import { globalClass } from '../styles'
 import moment from 'moment'
 
 export const getTimeHMS = () => moment().format('HH:mm:ss')
+export const getCurrentM = () => moment().format('M')
 
 export const isObb = x => !(x % 2)
 export const getClassName = (x) => {

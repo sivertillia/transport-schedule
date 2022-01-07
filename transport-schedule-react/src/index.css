@@ -1,10 +1,19 @@
 body {
-    font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;
 }
 
 /*Current Time Color TD:*/
-.mark_time_1,
-.mark_time_2,
-.mark_time_3 {
-    font-weight: 700;
+.show_container {
+  background-image: url(./assets/snowflake.png), url(./assets/snowflake3.png), url(./assets/snowflake2.png);
+  height: 100%;
+  animation: snow 20s linear infinite;
+}
+
+@keyframes snow {
+  0% {
+    background-position: 0px 0px, 0px 0px, 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px 300px;
+  }
 }

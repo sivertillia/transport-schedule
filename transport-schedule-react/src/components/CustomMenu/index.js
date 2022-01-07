@@ -12,14 +12,24 @@ import {
 import MenuIcon from '@mui/icons-material/Menu'
 import data from '../../assets/data.json'
 import AirportShuttleIcon from '@mui/icons-material/AirportShuttle'
-import { isObb } from '../../helpers'
+import { getCurrentM, isObb } from '../../helpers'
 import { makeStyles } from '@mui/styles'
 import { Time } from '../Time'
+import { useEffect, useState } from 'react'
 
 export const CustomMenu = (props) => {
   const classes = useStyles()
   const sx = useSxStyles
   const { openMenu, title, stateMenu, closeMenu } = props
+  const [animateShow, setAnimateShow] = useState(false)
+
+  useEffect(() => {
+    const currentMount = parseInt(getCurrentM())
+    const show = [1, 2, 12]
+    if (show.includes(currentMount)) {
+      setAnimateShow(true)
+    }
+  }, [])
 
   const handleClick = (id) => {
     const yOffset = -56;
@@ -37,7 +47,7 @@ export const CustomMenu = (props) => {
   }
   return (
     <>
-      <AppBar position="sticky">
+      <AppBar position="sticky" className={animateShow ? 'show_container' : null}>
         <Toolbar>
           <IconButton
             size="large"
