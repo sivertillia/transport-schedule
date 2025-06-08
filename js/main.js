@@ -15,7 +15,8 @@ $(document).ready(function () {
     return nowTime
   }
 
-  setInterval(time, 0)
+  // оновлюємо годинник раз на секунду
+  setInterval(time, 1000)
 
   const nowTimeHM = time()
 
